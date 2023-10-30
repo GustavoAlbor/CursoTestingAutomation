@@ -11,5 +11,4 @@ public class PrimerPruebaAutomationTest extends BaseTest {
         getDriver().get("https://opencart.abstracta.us/");
     }
 
-
 }
