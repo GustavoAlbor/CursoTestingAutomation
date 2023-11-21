@@ -34,7 +34,7 @@ public class MyAccountDefinitions {
     public void agregaUnProductoAlCarrito() {
         myAccountPage.ingresarACamaras();
         camerasPage.ingresarACanonEOS();
-        canonPage.SeleccionarColor("Opcion");
+        canonPage.SeleccionarColor(Hooks.getConfigValue("Opcion"));
         canonPage.AgregarACarrito();
     }
 }
