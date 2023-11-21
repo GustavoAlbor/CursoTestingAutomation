@@ -21,9 +21,10 @@ public class ProductTest extends BaseTest{
         loginPage.login("tavo@tavo.com.ar","12345678");
         myAccountPage.ingresarACamaras();
         camerasPage.AgregarAFavoritos();
-        homePage.ingresarALaWishList();
+        camerasPage.ingresarALaWishList();
 
         Assert.assertTrue(wishListPage.ProductFavIsDisplayed());
+        Assert.assertEquals(wishListPage.ElemFavName(), "Canon EOS 5D");
     }
 
 }

@@ -2,27 +2,29 @@ package opencart.Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-
-public class CamerasPage {
+public class CamerasPage extends BasePage {
 
     private By CanonFavBtn = By.xpath("//*[@id=\"content\"]/div[2]/div[1]/div/div[2]/div[2]/button[2]");
 
-    WebDriver driver;
-    WebDriverWait wait;
+    private By WishListBtn = By.xpath("//a[@id='wishlist-total']/span");
+
+    private By CanonTitleBtn = By.xpath("//div[@class='caption']/h4/a[text()='Canon EOS 5D']");
 
     public CamerasPage(WebDriver driver){
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        super(driver);
     }
 
     public void AgregarAFavoritos(){
-        WebElement CanonFavElement = wait.until(ExpectedConditions.elementToBeClickable(CanonFavBtn));
-        CanonFavElement.click();
+        click(CanonFavBtn);
+    }
+
+    public void ingresarALaWishList(){
+        click(WishListBtn);
+    }
+
+    public void ingresarACanonEOS(){
+        click(CanonTitleBtn);
     }
 
 }

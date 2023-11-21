@@ -16,7 +16,7 @@ public class LoginDefinitions {
 
     @Cuando("el usuario ingresa credenciales validas")
     public void elUsuarioIngresaCredencialesValidas(){
-        loginPage.login("tavo@tavo.com.ar", "12345678");
+        loginPage.login(Hooks.getConfigValue("username"), Hooks.getConfigValue("password"));
     }
 
 }

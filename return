@@ -1,0 +1,97 @@
+[33mcommit a0fdba46236810f482c9be0c74ba75996dd4e1dc[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Gustavo Albornoz <gustavo.albornoz@mi.unc.edu.ar>
+Date:   Sun Oct 29 22:35:03 2023 -0300
+
+    Se agrega el primer test automatizado de prueba realizado en la clase 6
+
+[33mcommit f48b681e2db8bef1efaf0b2a0fa897b16dac998d[m
+Author: Gustavo Albornoz <gustavo.albornoz@mi.unc.edu.ar>
+Date:   Sun Oct 29 22:10:09 2023 -0300
+
+    Se realizan los test mediante Cucumber siguiendo sus buenas practicas
+
+[33mcommit f0f5168bd62806db3ab86a73a09c2d92198571a0[m
+Author: Gustavo Albornoz <gustavo.albornoz@mi.unc.edu.ar>
+Date:   Sun Oct 29 22:08:49 2023 -0300
+
+    Se aplica el metodo POM en cada pagina de opencart
+
+[33mcommit 2cfd1a6260894bb36525e7b7d08acb8d218ae0c1[m
+Author: Gustavo Albornoz <gustavo.albornoz@mi.unc.edu.ar>
+Date:   Sun Oct 29 22:07:42 2023 -0300
+
+    Clase 7 se hace un ejemplo sobre las Esperas
+
+[33mcommit e4cee94529be925503b68f33fe7ea669a35b89f9[m
+Author: Gustavo Albornoz <gustavo.albornoz@mi.unc.edu.ar>
+Date:   Sun Oct 29 22:05:22 2023 -0300
+
+    Se agrega la clase 6 donde se realizo el primer test automatizado de prueba
+
+[33mcommit 530a1ba1d66984a6c3491ede1508aa7dcda5aeaa[m
+Author: Gustavo Albornoz <gustavo.albornoz@mi.unc.edu.ar>
+Date:   Sun Oct 29 22:03:12 2023 -0300
+
+    Se agregan dependencias de Cucumber, Faker y Gerkhin
+    git status
+
+[33mcommit 1bb8b534b450f4131c7ebf19992862e481e09f20[m
+Author: Gustavo Albornoz <gustavo.albornoz@mi.unc.edu.ar>
+Date:   Thu Oct 5 22:21:01 2023 -0300
+
+    Se renombra la carpeta Prueba-2 a EjerciciosDeClases para un mejor orden
+
+[33mcommit 4f4d24490ff94c0834bbfc322480acb482a54da8[m
+Merge: 004530f df0a579
+Author: Gustavo Albornoz <gustavo.albornoz@mi.unc.edu.ar>
+Date:   Thu Oct 5 22:03:24 2023 -0300
+
+    Merge branch 'main' of https://github.com/GustavoAlbor/CursoTestingAutomation
+
+[33mcommit 004530fdb388eb201fedde5d113200cabf7853c7[m
+Author: Gustavo Albornoz <gustavo.albornoz@mi.unc.edu.ar>
+Date:   Thu Oct 5 22:02:01 2023 -0300
+
+    Se elimina la carpeta Prueba que era erronea.
+
+[33mcommit 751aa62832d79dc9162831bf0daf90b1435f76b2[m
+Author: Gustavo Albornoz <gustavo.albornoz@mi.unc.edu.ar>
+Date:   Thu Oct 5 22:01:17 2023 -0300
+
+    Se registran cambios en el gitignore y se agregan dependencias de maven
+
+[33mcommit ecbfbe7d8eca1fa08c738636dbc7bb88dac0b1ba[m
+Author: Gustavo Albornoz <gustavo.albornoz@mi.unc.edu.ar>
+Date:   Thu Oct 5 21:58:25 2023 -0300
+
+    Se agregan ejercicios realizados en la clase 3
+
+[33mcommit df0a5791e956c333697e47225d7a027d26a631dc[m
+Author: Gustavo Albornoz <gustavo.albornoz@mi.unc.edu.ar>
+Date:   Mon Sep 25 00:49:49 2023 -0300
+
+    Ejericio 3 del examen practico: modelado de los personajes de un juego
+
+[33mcommit 179561fb78255673c18436dfaaf6c874ec09f742[m
+Author: Gustavo Albornoz <gustavo.albornoz@mi.unc.edu.ar>
+Date:   Sat Sep 23 22:36:50 2023 -0300
+
+    Ejercicio 1 y 2 del examen practico: Calculadora
+
+[33mcommit 4671be8ead45b2e1b9dfa7f51275f514fb2ca27d[m
+Author: Gustavo Albornoz <gustavo.albornoz@mi.unc.edu.ar>
+Date:   Sat Sep 23 18:55:58 2023 -0300
+
+    Ejercicios realizados durante las clases 1 a la 4
+
+[33mcommit 507e8b68a9e020fdf008a4239fb8b88a52230bd2[m
+Author: Gustavo Albornoz <gustavo.albornoz@mi.unc.edu.ar>
+Date:   Thu Aug 31 21:10:00 2023 -0300
+
+    Se agrega archivo Prueba-2 completo
+
+[33mcommit 47c71021fb1011bc0c9d15dfeee8974d1071e9ba[m
+Author: Gustavo Albornoz <gustavo.albornoz@mi.unc.edu.ar>
+Date:   Thu Aug 31 21:06:22 2023 -0300
+
+    se agrega el archivo Prueba completo

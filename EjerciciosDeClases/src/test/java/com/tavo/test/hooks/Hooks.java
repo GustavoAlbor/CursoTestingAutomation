@@ -5,16 +5,52 @@ import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.time.Duration;
+import java.util.Properties;
 
 public class Hooks {
     private static WebDriver driver;
 
+    private static Properties properties;
+
+    public static void setProperties(Properties properties) {
+        Hooks.properties = properties;
+    }
+
     @Before
-    public void setup() {
+    public void setup() throws IOException {
+        properties = new Properties();
+
+        properties.load(new FileInputStream(System.getProperty("user.dir")
+                + "\\src\\test\\resources\\config.properties"));
+
+        String browser = getConfigValue("browser");
+
+        switch (browser){
+            case "chrome":
+                driver = getChromeDriver();
+                break;
+            case "firefox":
+                driver = getFirefoxDriver();
+                break;
+            default:
+                throw new RuntimeException("Navegador no disponible");
+        }
+    }
+
+    public static WebDriver getDriver() {
+        return driver;
+    }
+
+    public static String getConfigValue(String key){
+        return properties.getProperty(key);              
+    }
+
+    private WebDriver getChromeDriver(){
         ChromeOptions options = new ChromeOptions();
 
         System.setProperty("webdriver.chrome.driver",
@@ -26,13 +62,18 @@ public class Hooks {
 
         options.setPageLoadTimeout(Duration.ofSeconds(60));
 
-        driver = new ChromeDriver(options);
-
-//        this.driver.manage().window().maximize();  //es otra forma de inicializar una pagina maximizada
+        return new ChromeDriver(options);
     }
 
-    public static WebDriver getDriver() {
-        return driver;
+    private WebDriver getFirefoxDriver() {
+        FirefoxOptions options = new FirefoxOptions();
+
+        System.setProperty("webdriver.gecko.driver",
+                System.getProperty("user.dir") + "\\drivers\\geckodriver.exe");
+
+        options.addArguments("-private");
+
+        return new FirefoxDriver(options);
     }
 
     @After

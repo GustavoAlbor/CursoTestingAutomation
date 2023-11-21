@@ -2,12 +2,8 @@ package opencart.Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-public class HomePage {
+public class HomePage extends BasePage {
 
     private By title = By.xpath("//div[@id='logo']/h1/a");
     private By search = By.name("search");
@@ -18,50 +14,32 @@ public class HomePage {
 
     private By RegisterBtn = By.xpath("//a[contains(@href, 'account/register')]");
 
-    private By WishListBtn = By.xpath("//a[@id='wishlist-total']/span");
-
-    WebDriver driver;
-    WebDriverWait wait;
 
     public HomePage(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        super(driver);
     }
 
     public void ingresarAlLogin() {
-        WebElement myAccountBtnElem = wait.until(ExpectedConditions.elementToBeClickable(myAccountBtn));
-        myAccountBtnElem.click();
-
-        WebElement loginBtnElem = wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
-        loginBtnElem.click();
+        click(myAccountBtn);
+        click(loginBtn);
     }
 
     public String getTitulo() {
-        WebElement titleElement = wait.until(ExpectedConditions.visibilityOfElementLocated(title));
-        return titleElement.getText();
+        return getText(title);
     }
 
     public Boolean buscadorEsVisible() {
-        WebElement searchElement = wait.until(ExpectedConditions.visibilityOfElementLocated(search));
-        return searchElement.isDisplayed();
+        return isDisplayed(search);
     }
 
     public Boolean carrouselEsVisible() {
-        WebElement carrouselElement = wait.until(ExpectedConditions.visibilityOfElementLocated(carrousel));
-        return carrouselElement.isDisplayed();
+        return isDisplayed(carrousel);
     }
 
     public void ingresarAlRegister(){
-        WebElement myAccountBtnElem = wait.until(ExpectedConditions.elementToBeClickable(myAccountBtn));
-        myAccountBtnElem.click();
-
-        WebElement RegisterBtnElement = wait.until(ExpectedConditions.elementToBeClickable(RegisterBtn));
-        RegisterBtnElement.click();
+        click(myAccountBtn);
+        click(RegisterBtn);
     }
 
-    public void ingresarALaWishList(){
-        WebElement WishListElem = wait.until(ExpectedConditions.elementToBeClickable(WishListBtn));
-        WishListElem.click();
-    }
 
 }
