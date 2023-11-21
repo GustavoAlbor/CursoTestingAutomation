@@ -13,7 +13,7 @@ public class CanonPage extends BasePage{
 
     private By addCartBtn = By.id("button-cart");
 
-    private By addCartAlert = By.className("alert alert-success alert-dismissible");
+    private By addCartAlert = By.xpath("//div[@class='alert alert-success alert-dismissible']");
 
     private By CartBtn = By.xpath("//div[@id='cart']/button[@type='button']");
 
